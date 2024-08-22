@@ -1,0 +1,130 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Poppins", "sans-serif";
+  box-sizing: border-box;
+}
+body {
+  background: #222;
+
+}
+.card {
+  width: 40%;
+  max-width: 470px;
+  background: linear-gradient(135deg, #00feba, #5b548a);
+  color: #fff;
+  margin: 30px auto 0;
+  border-radius: 20px;
+  padding: 40px 35px;
+  text-align: center;
+
+}
+.search {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.search input {
+  border: 0;
+  outline: 0;
+  background: #ebfffc;
+  color: #555;
+  padding: 10px 25px;
+  height: 50px;
+  border-radius: 30px;
+  flex: 1;
+  margin-right: 16px;
+  font-size: 18px;
+}
+/* Button styles inside the .search class */
+.search button {
+  position: relative;
+  padding: 12px 24px;
+  border-radius: 8px;
+  background-color: white;
+  color: black;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease,
+    transform 250ms cubic-bezier(0.2, 0.8, 0.4, 1);
+}
+
+/* Hover effect for the button */
+.search button:hover {
+  background-color: #f0f0f0;
+  transform: scale(1.05);
+  color: #fff;
+}
+
+/* Additional styles for the button's background effect */
+.search button::before {
+  content: "";
+  filter: blur(1px);
+  border-radius: 8px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: opacity 1.5s ease;
+  background: linear-gradient(135deg, #00ffb3, #6a56a5);
+
+  animation: 10s ease-in-out 0s infinite normal both running pulse;
+  opacity: 0.75;
+  z-index: -1;
+}
+
+.search button:hover::before {
+  transition-duration: 0.25s;
+  opacity: 1;
+}
+.weather-icon {
+  width: 170px;
+  margin-top: 20px;
+}
+
+.weather h1 {
+  font-size: 80px;
+  font-weight: 500;
+}
+.weather h2 {
+  font-size: 45px;
+  font-weight: 400;
+  margin-top: -10px;
+}
+.details {
+display: flex;
+align-items: center;
+justify-content: space-between;
+padding: 0 20px;
+margin-top: 50px;
+}
+.col{
+    display: flex;
+    align-items: center;
+    text-align: left;
+}
+.col img{
+    width: 40px;
+    margin-right: 10px;
+}
+.humidity, .wind{
+    font-size: 28px;
+    margin-top: -6px;
+}
+.weather{
+    display: none;
+}
+.error{
+    text-align: left;
+    margin-left: 10px;
+    font-size: 14px;
+    margin-top: 10px;
+    display: none;
+    font-size: 18px;
+    margin-bottom: -30px;
+    text-align: center;
+    color: rgb(161, 10, 10);
+}
